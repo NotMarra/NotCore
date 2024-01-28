@@ -1,0 +1,4 @@
+name: NotCore
+version: '${project.version}'
+main: com.notmarra.notcore.NotCore
+api-version: '1.18'
