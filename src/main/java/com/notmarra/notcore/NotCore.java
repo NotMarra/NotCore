@@ -1,19 +1,23 @@
 package com.notmarra.notcore;
 
 import com.notmarra.notcore.plugin.CheckUpdate;
+import com.notmarra.notcore.utils.File;
+import com.notmarra.notcore.utils.Test;
+import com.notmarra.notcore.utils.Updater;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class NotCore extends JavaPlugin {
 
-    public static NotCore instance;
-
-    public static NotCore getInstance() {
-        return instance;
-    }
+    public Updater Updater;
+    public File File;
+    public Test Test;
 
     @Override
     public void onEnable() {
         instance = this;
+        Updater = new Updater();
+        File = new File();
+        Test = new Test();
 
         CheckUpdate.checkUpdate();
 
@@ -25,4 +29,12 @@ public final class NotCore extends JavaPlugin {
         // Plugin shutdown logic
         getLogger().info("Disabled successfully!");
     }
+
+    public static NotCore instance;
+
+    public static NotCore getInstance() {
+        return instance;
+    }
+
+
 }

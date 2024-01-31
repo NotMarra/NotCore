@@ -15,6 +15,7 @@ public class Updater {
      * @param github Link to the api of repo.
      * @return 2 failed fetching version, 1 is up to date, 0 is not up to date.
      */
+
     public int isUpToDate(String plugin_version, String github) {
         String latest_version = getResponse(github);
 
@@ -32,6 +33,7 @@ public class Updater {
      * @param github Link to the api of repo.
      * @return Latest version.
      */
+
     public String getLatestVersion(String github) {
         return getResponse(github);
     }
